@@ -1,16 +1,67 @@
-# solution
+# Solution
 
-Common solutions for Dart/Flutter
+- [About solution](#About-solution)
+- [Installing](#Installing)
+- [Function](#Function)
+    - [Debounce](#Debounce)
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+# About-solution
+* Common solutions for Dart/Flutter
+* The current version includes debounce functions
+* More solution will be added in the future
 
-A few resources to get you started if this is your first Flutter project:
+# Installing
+Add solution to your pubspec.yaml file:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+```yaml
+dependencies:
+  solution: ^1.0.1
+```
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Import get in files that it will be used:
+
+```dart
+import 'package:solution/solution.dart';
+```
+
+# Function
+## Debounce
+Prevent a `Voidcallback` from being called continuously.  
+This function is usually used for App of Widget
+
+### Usage
+Simple
+```
+TextButton(
+  onPressed: DebounceClick().debounce(() {
+    print("time:${DateTime.now().second}");
+  }),
+  child: const Text("Click")
+```
+The `debounce()` is return `function()`,so you can use many place.
+```
+ListTile(
+  title: Text("Back"),
+  subtitle: Text('Back to HomePage'),
+  onTap: DebounceClick().debounce(() {
+    print("time:${DateTime.now().second}");
+  }),
+)
+```
+Set global debounce default delay time(Default delay time is 500 millisecond)
+```
+DebounceClick.setDefaultDelay(1000);
+```
+Set one debounce delay time
+```
+TextButton(
+  onPressed: DebounceClick().debounce(() {
+    print("time:${DateTime.now().second}");
+  }, delayMillisecond: 1000),
+  child: const Text("Click")
+```
+
+
+
+
