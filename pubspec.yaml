@@ -1,0 +1,10 @@
+name: solution
+description: Common solutions  for Dart/Flutter
+version: 1.0.0
+#homepage:
+
+environment:
+  sdk: ">=2.17.1"
+
+dev_dependencies:
+  test:
