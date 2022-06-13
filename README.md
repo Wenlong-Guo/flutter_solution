@@ -1,6 +1,6 @@
 # solution
 
-Common solutions  for Dart/Flutter
+Common solutions for Dart/Flutter
 
 ## Getting Started
 

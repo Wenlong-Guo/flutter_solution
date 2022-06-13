@@ -30,6 +30,7 @@
 build/
 
 # Android related
+/android/
 **/android/**/gradle-wrapper.jar
 **/android/.gradle
 **/android/captures/
@@ -39,6 +40,7 @@ build/
 **/android/**/GeneratedPluginRegistrant.java
 
 # iOS/XCode related
+/ios/
 **/ios/**/*.mode1v3
 **/ios/**/*.mode2v3
 **/ios/**/*.moved-aside
@@ -74,3 +76,4 @@ build/
 # Packages should not commit the "pubspec.lock" file. See
 # https://stackoverflow.com/a/16136740/8358501
 pubspec.lock
+analysis_options.yaml
