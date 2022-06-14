@@ -38,6 +38,7 @@ TextButton(
     print("time:${DateTime.now().second}");
   }),
   child: const Text("Click")
+)
 ```
 The `debounce()` is return `function()`,so you can use many place.
 ```
@@ -60,6 +61,7 @@ TextButton(
     print("time:${DateTime.now().second}");
   }, delayMillisecond: 1000),
   child: const Text("Click")
+)
 ```
 
 
